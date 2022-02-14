@@ -1,0 +1,7 @@
+docker build -t test .
+
+docker run -it --env-file sample-git.env  test 
+
+Non interactive if redirect to a file
+
+Need to add support for a branch.
