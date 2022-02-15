@@ -24,7 +24,7 @@ git config --global credential.helper "/bin/bash /tmp/credential-helper.sh"
 python3 -m venv /tmp/venv3
 . /tmp/venv3/bin/activate
 
-git clone -b py3cleanup $gprefix/onedep_admin
+git clone $gprefix/onedep_admin
 
 python3 -m pip install -U pip wheel setuptools
 python3 -m pip install -U pip wheel setuptools
@@ -46,3 +46,5 @@ for i in `cat $base/requirements_wwpdb_dependencies.txt` ; do
     fi
     
 done
+
+python3 -m pip check
